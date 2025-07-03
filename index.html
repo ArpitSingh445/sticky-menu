@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticky Menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f4;
+    }
+
+    #header {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    #logo {
+      height: auto;
+      width: 250px;
+      max-width: 80%;
+      animation: fadeIn 1s ease-in;
+    }
+
+    #menu-bar {
+      background-color: #16549B;
+      text-align: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #menu-bar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    #menu-bar li {
+      display: inline-block;
+      color: white;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #menu-bar li:hover {
+      background-color: white;
+      color: #16549b;
+    }
+
+    #container {
+      text-align: center;
+      padding: 20px 100px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    #img {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 25px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      transform: translateY(-100%);
+      animation: slideDown 0.4s ease forwards;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    @keyframes slideDown {
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 992px) {
+      #container {
+        padding: 15px 40px;
+      }
+
+      #menu-bar li {
+        padding: 12px 15px;
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #container {
+        padding: 10px 15px;
+      }
+
+      #menu-bar li {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      #logo {
+        width: 180px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <img id="logo" src="https://www.logodesign.net/images/nature-logo.png" alt="Natural Logo">
+  </div>
+
+  <nav id="menu-bar">
+    <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Our Team</li>
+      <li>Client</li>
+      <li>Contact Us</li>
+    </ul>
+  </nav>
+
+  <div id="container">
+    <h1>Sticky Menu</h1>
+    <img id="img" src="https://ps.w.org/sticky-menu-or-anything-on-scroll/assets/banner-1544x500.png?rev=2391657" alt="Sticky Menu Image" />
+    <p>
+       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum soluta beatae harum temporibus? Fugiat, quis modi? A porro quisquam libero iure veritatis fugit facere eum assumenda. Necessitatibus repellendus ad alias atque dignissimos modi minima autem! Incidunt magni itaque perferendis error obcaecati delectus, nemo adipisci dolor aspernatur neque debitis sed blanditiis accusantium temporibus deleniti explicabo eos? Id eius error ratione libero magni natus totam quas dolorem voluptatem quis, vitae, et, mollitia adipisci illum quo. Deserunt nemo nihil, aut odit optio dolorem iste corporis veritatis et soluta. Id deserunt ipsa provident nemo maiores rem, non nesciunt nobis nam laborum ut ex accusantium aspernatur expedita at doloremque itaque eveniet cumque numquam. Doloremque cupiditate ab quo eaque expedita neque. Obcaecati, voluptates, illo minus praesentium sequi voluptatum, beatae blanditiis fugit iure velit nam veniam molestiae sunt facilis! Necessitatibus dolor iure quod quas quae animi voluptatibus, aperiam accusantium dolorum doloribus nihil exercitationem porro suscipit quam alias, veritatis laborum sit. Distinctio cumque eligendi odio cum quidem, molestiae, deserunt ratione officiis soluta, voluptates fugit at rem repellendus asperiores voluptas corporis quasi vel laborum dolores tempora commodi ea nulla. Sit sunt magnam itaque alias commodi possimus rerum suscipit corporis dolorum culpa ea odio nobis nisi, ex hic ipsum. Aut enim, optio porro commodi unde consectetur voluptas, soluta sed alias officia adipisci laborum repellendus consequuntur, quae rem sapiente? Odit et saepe magni ratione sunt veritatis delectus soluta, facilis magnam assumenda dolorum rerum hic explicabo nisi voluptas fugit voluptatum aliquam eveniet aspernatur mollitia, similique voluptates? Est cumque, perspiciatis nostrum, odio quibusdam quisquam iure commodi veniam at debitis mollitia. Aspernatur quo repellat voluptates omnis ut? Pariatur cum fugiat amet quam architecto eos. Eaque autem odit maxime nam consequuntur error tempore porro accusantium facilis nisi velit, quam, doloribus iure quod pariatur nihil asperiores incidunt quaerat tempora. Iusto perferendis error assumenda excepturi, molestias, totam amet maxime nisi, facere minus ad sequi doloribus eligendi necessitatibus dolore. Nisi quam soluta porro molestias odio placeat, vitae explicabo facere ab ratione tenetur alias. Nam explicabo molestiae fuga incidunt, sed adipisci laboriosam nisi perspiciatis hic eligendi? Animi accusantium cum autem sapiente debitis laudantium sint cupiditate blanditiis consequatur, molestias optio possimus distinctio itaque rem dolor corporis, cumque quis quisquam ducimus accusamus! Non impedit, qui saepe, maxime tempore quo architecto itaque eaque mollitia, accusamus aspernatur laboriosam explicabo repellat iusto? Quibusdam fugit commodi nisi dolore? Vitae sapiente blanditiis suscipit consequuntur molestias reiciendis ea est, recusandae excepturi quod possimus rem enim dicta tenetur?
+    </p>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      let navbar = document.getElementById('menu-bar');
+      let container = document.getElementById('container');
+
+      if (window.pageYOffset >= 190) {
+        navbar.classList.add('sticky');
+        container.style.marginTop = navbar.offsetHeight + "px";
+      } else {
+        navbar.classList.remove('sticky');
+        container.style.marginTop = "0px";
+      }
+    });
+  </script>
+</body>
+</html>
